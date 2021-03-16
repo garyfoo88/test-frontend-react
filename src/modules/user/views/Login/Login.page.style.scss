@@ -1,0 +1,74 @@
+@import "../../../../config/theme";
+
+.login {
+  &__header {
+    padding: 20px 0 40px 0;
+    &--image {
+      max-width: 350px;
+    }
+  }
+  &__form {
+    padding: 20px 0;
+    width: 80%;
+    &--field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      .form {
+        &-label {
+          margin-bottom: 10px;
+        }
+        &-field {
+          border-color: $primary-main;
+          padding: 5px;
+          border-style: solid;
+          border-radius: 5px;
+          &__error {
+            border-color: $danger;
+            padding: 5px;
+            border-style: solid;
+            border-radius: 5px;
+          }
+        }
+        &-error {
+          margin-top: 5px;
+          font-size: 12px;
+          color: $danger;
+        }
+      }
+    }
+    &--action {
+      margin-top: 10px;
+      cursor: pointer;
+      color: #fff;
+      padding: 8px 0;
+      border-radius: 10px;
+      justify-content: center;
+      text-align: center;
+      background-color: $primary-main;
+      &-loading {
+        margin-top: 10px;
+        cursor: progress;
+        color: #fff;
+        padding: 8px 0;
+        border-radius: 10px;
+        justify-content: center;
+        text-align: center;
+        background-color: #666;
+      }
+      &-disabled {
+        margin-top: 10px;
+        color: #fff;
+        padding: 8px 0;
+        border-radius: 10px;
+        justify-content: center;
+        text-align: center;
+        background-color: #666;
+      }
+    }
+  }
+}
+
+.error-color {
+  color: $danger;
+}

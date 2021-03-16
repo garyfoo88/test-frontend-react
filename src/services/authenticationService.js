@@ -1,7 +1,7 @@
 import http from "./httpService";
 
-export function login(data) {
-  return http.post(`${process.env.REACT_APP_API_REST_ENDPOINT}/session/login`, data);
+export function login(data, config) {
+  return http.post(`${process.env.REACT_APP_API_REST_ENDPOINT}/session/login`, data, config);
 }
 
 export function logout() {

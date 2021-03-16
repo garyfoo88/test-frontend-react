@@ -1,0 +1,17 @@
+@import "../../../../config/theme";
+
+.home {
+  width: 80%;
+
+  &__logout-button {
+    margin-top: 20px;
+    width: 30%;
+    cursor: pointer;
+    color: #fff;
+    padding: 8px 0;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    background-color: $primary-main;
+  }
+}

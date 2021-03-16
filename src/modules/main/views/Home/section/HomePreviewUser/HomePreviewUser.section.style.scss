@@ -1,0 +1,46 @@
+@import "../../../../../../config/theme";
+
+.home-preview-user {
+  &__title {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  &__form {
+    margin: 5px 0;
+    &--section {
+      margin: 5px 0;
+      &-row {
+        margin: 5px 0;
+        display: flex;
+        margin-right: -20px;
+      }
+    }
+    .form-field {
+      display: flex;
+      width: 100%;
+      flex: 1;
+      border-color: $primary-main;
+      padding: 8px;
+      border-style: solid;
+      border-radius: 5px;
+      &__birthdate {
+        display: flex;
+        flex: 1;
+        margin-right: 20px;
+        border-color: $primary-main;
+        padding: 8px;
+        border-style: solid;
+        border-radius: 5px;
+      }
+      &__phone {
+        display: flex;
+        flex: 3;
+        margin-left: 20px;
+        border-color: $primary-main;
+        padding: 8px;
+        border-style: solid;
+        border-radius: 5px;
+      }
+    }
+  }
+}
