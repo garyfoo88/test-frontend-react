@@ -1,11 +1,11 @@
 //#region IMPORT
 // IMPORT MODULE
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import * as Yup from "yup";
 import { Field, Formik, FieldProps } from "formik";
 
 // IMPORT COMPONENT
-import logo from "../../../../assets/images/logo.png";
+import logo from "../../../../images/logo.png";
 
 // IMPORT CONFIG
 import { emailRegex, LoginFormValues, LoginResponse } from "../../entity";
