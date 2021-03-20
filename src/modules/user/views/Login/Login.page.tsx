@@ -13,12 +13,14 @@ import { login } from "../../../../services/authenticationService";
 import { useHistory } from "react-router";
 import { PATH } from "../../../wrapper/entity";
 import "./Login.page.style.scss";
+import { AxiosResponse } from "axios";
 //#endregion
 
 const Login: React.FC = () => {
   //#region GENERAL
   const history = useHistory();
   const [isLoading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(false);
 
   //#endregion
 
@@ -36,14 +38,24 @@ const Login: React.FC = () => {
   });
 
   const handleSubmit = async (e: LoginFormValues) => {
-    setLoading(prevLoading => !prevLoading);
-    const res = await login(e);
-    if (res.status === 200) {
-      localStorage.setItem("userData", JSON.stringify(res.data));
-      localStorage.setItem("key", e.secretKey);
-      localStorage.setItem("jwt", (res.data as LoginResponse).jwt);
-      history.replace(PATH.HOME);
-    }
+    setLoading(true);
+    login(e)
+      .then(res => {
+        if (res.status === 200) {
+          localStorage.setItem("userData", JSON.stringify(res.data));
+          localStorage.setItem("key", e.secretKey);
+          localStorage.setItem("jwt", (res.data as LoginResponse).jwt);
+          history.replace(PATH.HOME);
+        }
+      })
+      .catch(err => {
+        if (err) {
+          setErrorMsg((err as AxiosResponse).data);
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
   //#endregion
   return (
@@ -51,6 +63,7 @@ const Login: React.FC = () => {
       <div className="login__header">
         <img src={logo} alt="login-img" className="login__header--image" />
       </div>
+      {errorMsg && <div className="feedback">{errorMsg}</div>}
       <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={formValidation}>
         {({ handleSubmit, errors, isValid }): React.ReactElement => (
           <div className="login__form">
