@@ -1,2 +1,22 @@
 #login {
+	padding: 32px;
+	width: 350px;
+}
+
+.formControl {
+	margin-top: 16px;
+}
+
+.input {
+	border-radius: 5px;
+	box-shadow: 5px 5px 10px 5px #e6e6e6;
+	width: 100%;
+}
+
+.button {
+	color: white;
+	background-color: #35b0ad;
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px 5px #e6e6e6;
+	width: 100%;
 }
