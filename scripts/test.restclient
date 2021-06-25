@@ -1,0 +1,8 @@
+POST https://dev.api-rest.speedoc.com/session/login
+x-api-key: Mitrfd3Ev45e3tvzmOYeT7HdMe4jGEpN5rawgNGM
+
+{
+  "password" : "speedocdemo",
+  "email": "jarvis@speedoc.com",
+  "rememberMe": true
+}
