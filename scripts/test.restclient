@@ -1,4 +1,5 @@
 POST https://dev.api-rest.speedoc.com/session/login
+content-type: application/json
 x-api-key: Mitrfd3Ev45e3tvzmOYeT7HdMe4jGEpN5rawgNGM
 
 {
