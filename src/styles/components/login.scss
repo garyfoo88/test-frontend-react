@@ -1,2 +1,53 @@
-#login {
+.login-container {
+    margin: 3%;
+    margin-top: 4%;
+}
+
+.form-element {
+    padding: 10px 0 10px 0;
+}
+
+.form-element-checkbox {
+    padding: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.form-label{
+    color: dimgray;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 28vw;
+    height: 28px;
+    border-radius: 8px;
+}
+
+.login-checkbox {
+    transform: scale(1.5);
+    margin-right: 16px;
+    background-color: transparent;
+}
+
+.login-button {
+    width: 28vw;
+    height: 32px;
+    background-color: #3ca7a5;
+    border-radius: 8px;
+    color: white;
+    border-color: transparent;
+    font-weight: 600;
+}
+
+.login-button:hover{
+    background-color: #8bc9c8;
+}
+
+.login-button:active{
+    background-color: #3ca7a5;
+}
+
+.login-button:disabled{
+    background-color: grey;
 }
